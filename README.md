@@ -1,7 +1,5 @@
 # s3-multipart-uploader
 
-[![Build Status](https://travis-ci.org/jeremyn/s3-multipart-uploader.svg?branch=master)](https://travis-ci.org/jeremyn/s3-multipart-uploader)
-
 A Python program using boto3 that does a multipart file upload to AWS S3 with file integrity checking. It approximates the instructions at https://aws.amazon.com/premiumsupport/knowledge-center/s3-multipart-upload-cli/ .
 
 ## Author
