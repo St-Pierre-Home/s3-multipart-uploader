@@ -22,8 +22,7 @@ def get_file_hash(filename, algorithm='md5'):
     """Linux equivalent: openssl <algorithm> -binary <filename> | base64"""
     hash_obj = getattr(hashlib, algorithm)()
     with open(filename, 'rb') as file_:
-        read_chunk = partial(file_.read, hash_obj.block_size * 1024)
-        for chunk in iter(read_chunk, ''):
+        for chunk in iter(lambda: file_.read(1024), b""):
             hash_obj.update(chunk)
     file_hash = hash_obj.digest()
     file_hash = base64.b64encode(file_hash).decode()
