@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# Copyright 2017 by Jeremy Nation <jeremy@jeremynation.me>
-# License: MIT.
 import argparse
 import base64
 from functools import partial
